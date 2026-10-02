@@ -1,4 +1,6 @@
-﻿int totalExercises = 1;
+﻿using System.Text.RegularExpressions;
+
+int totalExercises = 1;
 
 for (int number = 8; number >= totalExercises; number--)
 {
@@ -43,4 +45,30 @@ for (int ticket = 4; ticket <= 30; ticket++)
 
     Console.WriteLine($"Первый доступный билет : {ticket}, пропущенно {count}");
     break;
+}
+
+
+
+for (; ; ) {
+    Console.Write("Введите код группы (для выхода - <<выход>>): ");
+    string groupCode = Console.ReadLine();
+
+    if (groupCode == "exit") {
+        break;
+    }
+
+    Console.WriteLine($"Записан код группы: {groupCode}");
+}
+
+Console.WriteLine("Работа с журналом завершена");
+
+
+Console.WriteLine("Задача A");
+for (int N = 1; N <= 50; N++)
+{
+    if (N % 2 == 0)
+    {
+        continue;
+    }
+    Console.WriteLine($"Нечетное число: {N}");
 }
